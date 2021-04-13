@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+
+
+<title>New restaurants</title>
+
+<h1>Add Restaurants</h1>
+
+
+<nav>
+<a href="./">
+<button>front page</button>
+</a>
+
+<a href="/about">
+<button>about page</button>
+</a>
+
+<a href="/home"><button>Restaurant List</button></a>
+</nav>
+
+
+<form action="/restaurants" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required placeholder="Restaurant Name" >
+    
+    <br>
+
+    <label>Image:</label><br>
+    <input type="url" name="image" required placeholder="Image URL">
+    
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<!--pattern="[a-zA-Z]+" oninvalid="Please enter letters only"-->
+
+
+</html>

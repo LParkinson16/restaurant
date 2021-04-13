@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+
+<title>Restaurant homepage</title>
+
+<h1>Restaurants list/homepage</h1>
+
+<nav>
+<a href="./">
+<button>front page</button>
+</a>
+
+<a href="/about">
+<button>about page</button>
+</a>
+
+<a href="/new"><button>Add new</button></a>
+</nav>
+
+
+<small>A list of restaurants and their accompanying menus</small>
+
+<section>
+    {{#each restaurants}}
+    <div>
+        <a href="/restaurants/{{this.id}}">
+        <article>
+            <header style="background-image: url({{this.image}})"></header>
+            <main>{{this.name}}</main>
+            <footer>{{this.Menus.length}} menus</footer>
+            <br>
+        </article>
+        </a>
+    <a href="/restaurants/{{this.id}}/delete"><button id="sButton">Delete</button></a>
+    <a href="/restaurants/{{this.id}}/edit"><button id="sButton">Edit</button></a>
+    </div>
+    {{/each}}
+
+    
+</section>
+
+
+
+</html>

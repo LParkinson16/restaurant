@@ -1,0 +1,50 @@
+<html lang="en">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+    
+<title>Induvidual restaurants</title>
+<h1>induvidual restaurants</h1>
+
+<nav>
+<a href="./">
+<button>front page</button>
+</a>
+
+<a href="/about">
+<button>about page</button>
+</a>
+
+<a href="/new"><button>Add new</button></a>
+
+<a href="/home"><button>Restaurant List</button></a>
+</nav>
+
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="guUxEMHV"></script>
+
+<section>
+    {{#each menus}}
+        <article>
+            <h2>{{this.title}}</h2>
+            <dl>
+                {{#each this.Items}}
+                    <div>
+                        <dt>{{this.name}}</dt>
+                        <dd>£{{this.price}}</dd>
+                    </div>
+                {{/each}}
+            </dl>
+        </article>
+    {{/each}}
+</section>
+
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+
+
+</html>
